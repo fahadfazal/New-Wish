@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background: #1a1a2e;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #ff99cc 0%, #1a1a2e 100%);
+  animation: floatHearts 10s infinite;
+  z-index: -2;
+}
+
+@keyframes floatHearts {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 3em;
+  color: #ffccff;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #ffd6f5;
+}
+
+button#playBtn {
+  margin-top: 30px;
+  padding: 12px 24px;
+  background-color: #ff4da6;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button#playBtn:hover {
+  background-color: #cc0066;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px auto;
+  max-width: 700px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #ffcce6;
+}
+
+.card p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ffe6f2;
+}
+
+.signature {
+  text-align: right;
+  font-style: italic;
+  margin-top: 20px;
+}
