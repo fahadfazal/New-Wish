@@ -1,9 +1,11 @@
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base Styles */
 body, html {
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
@@ -12,6 +14,7 @@ body, html {
   background: #1a1a2e;
 }
 
+/* Background Animation */
 .background {
   position: fixed;
   top: 0;
@@ -24,10 +27,15 @@ body, html {
 }
 
 @keyframes floatHearts {
-  0% { background-position: 0 0; }
-  100% { background-position: 100% 100%; }
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 100px 20px 40px;
@@ -44,6 +52,7 @@ body, html {
   color: #ffd6f5;
 }
 
+/* Button Styles */
 button#playBtn {
   margin-top: 30px;
   padding: 12px 24px;
@@ -60,6 +69,7 @@ button#playBtn:hover {
   background-color: #cc0066;
 }
 
+/* Card Component */
 .card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
@@ -82,6 +92,7 @@ button#playBtn:hover {
   color: #ffe6f2;
 }
 
+/* Signature Section */
 .signature {
   text-align: right;
   font-style: italic;
