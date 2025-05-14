@@ -10,8 +10,10 @@
 
   <div class="background"></div>
 
+  <!-- 🔊 Background Audio -->
   <audio id="bgMusic" loop>
-    <source src="music/your-song.mp3" type="audio/mp3">
+    <source src="songnew2.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
   </audio>
 
   <div class="hero">
@@ -31,6 +33,20 @@
   </div>
 
   <canvas id="confettiCanvas"></canvas>
+
+  <script>
+    const playBtn = document.getElementById('playBtn');
+    const bgMusic = document.getElementById('bgMusic');
+
+    playBtn.addEventListener('click', () => {
+      bgMusic.play().catch(err => {
+        console.log("Audio play failed:", err);
+      });
+      playBtn.textContent = '🎵 Playing...';
+      playBtn.disabled = true;
+    });
+  </script>
+  
   <script src="script.js"></script>
 </body>
 </html>
