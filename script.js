@@ -1,7 +1,16 @@
-// Play background music
 const playBtn = document.getElementById("playBtn");
 const bgMusic = document.getElementById("bgMusic");
 
+// Auto-play after 2 seconds
+setTimeout(() => {
+  bgMusic.play().then(() => {
+    playBtn.textContent = "⏸️ Pause Music";
+  }).catch((err) => {
+    console.log("Autoplay blocked, user must interact first.");
+  });
+}, 2000);
+
+// Manual toggle button
 playBtn.addEventListener("click", () => {
   if (bgMusic.paused) {
     bgMusic.play();
